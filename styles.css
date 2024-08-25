@@ -2,8 +2,9 @@
   /* primary colors */
 
   --clr-blue-primary-900: hsl(223, 46%, 23%);
-  --clr-purple-primary-600: hsl(245, 75%, 52%);
   --clr-blue-primary-300: hsl(224, 38%, 67%);
+  --clr-purple-primary-600: hsl(245, 75%, 52%);
+  --clr-purple-primary-400: hsl(245, 83%, 68%);
 
   /* secondary colors */
 
@@ -32,8 +33,8 @@
 }
 
 /*========== 
-     utilities 
-    ==========*/
+   utilities 
+  ==========*/
 
 .flex-group-1 {
   display: flex;
@@ -49,8 +50,8 @@
 }
 
 /*================ 
-     global styling 
-    ================*/
+   global styling 
+  ================*/
 
 body {
   background-color: var(--clr-blue-secondary-300);
@@ -75,41 +76,26 @@ body::after {
   z-index: -1;
 }
 
-/*================
-     shared properties 
-    ==================*/
-
 .summary-card__title,
 .payment-plan__type {
   color: var(--clr-blue-primary-900);
   font-weight: var(--fw-600);
 }
 
-.payment-plan__change-link:active,
-.btn-primary:active {
-  opacity: 60%;
-}
-
-.payment-plan__change-link:active,
-.btn-primary:active,
-.btn-secondary:active {
-  cursor: pointer;
-}
-
 /*========
-     layout 
-    ========*/
+   layout 
+  ========*/
 
 .summary-card {
   background-color: var(--clr-white);
   border-radius: var(--border-radius);
   max-width: calc(430rem / 16);
   text-align: center;
+  overflow: hidden;
   box-shadow: var(--shadow-elevation-medium);
 }
 
 .summary-card__image {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
   object-fit: cover;
 }
 
@@ -124,7 +110,7 @@ body::after {
   margin-bottom: 1rem;
 }
 
-.summary-card__payment-plan {
+.payment-plan {
   background-color: var(--clr-grey);
   border-radius: 10px;
   margin-block: 1.5rem;
@@ -132,7 +118,7 @@ body::after {
 }
 
 .payment-plan__details {
-  margin-left: -0.5rem;
+  margin-left: -1rem;
 }
 
 .payment-plan__type {
@@ -145,9 +131,18 @@ body::after {
   font-weight: var(--fw-500);
 }
 
+.payment-plan__change-link:is(:hover, :focus),
+.btn-primary:is(:hover, :focus) {
+  opacity: 75%;
+}
+
+.payment-plan__change-link:is(:hover, :focus) {
+  text-decoration: none;
+}
+
 /*================ 
-     button styling 
-    ==============*/
+   button styling 
+  ==============*/
 
 .btn {
   display: block;
@@ -172,7 +167,7 @@ body::after {
   border: none;
 }
 
-.btn-secondary:active {
+.btn-secondary:is(:hover, :focus) {
   color: var(--clr-blue-primary-900);
 }
 
