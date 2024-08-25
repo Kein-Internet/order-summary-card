@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="normalise.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+  </head>
+  <body class="flex-group-1">
+    <main>
+      <!-- Order Summary Card -->
+      <section class="summary-card">
+        <!-- Image half of the card -->
+        <div class="summary-card__image-half">
+          <!-- Images -->
+          <img
+            src="images/illustration-hero.svg"
+            alt=""
+            class="summary-card__image"
+          />
+        </div>
+
+        <!-- Text half of the card -->
+        <div class="summary-card__text-half">
+          <h2 class="summary-card__title">Order Summary</h2>
+
+          <!-- Description of product -->
+          <p class="summary-card__desc">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+
+          <!-- payment plan -->
+          <div class="summary-card__payment-plan flex-group-2">
+            <img src="images/icon-music.svg" alt="" class="payment-plan__img" />
+            <!-- payment plan details -->
+            <div class="payment-plan__details">
+              <h3 class="payment-plan__type">Annual Plan</h3>
+              <p class="payment-plan__price">$59.99/year</p>
+            </div>
+            <!-- link to change payment plan -->
+            <a href="#" class="payment-plan__change-link link">Change</a>
+          </div>
+
+          <!-- call to action -->
+          <!-- button to proceed -->
+          <button type="button" class="summary-card__btn btn btn-primary">
+            Proceed to Payment
+          </button>
+
+          <!-- button to cancel order -->
+          <button type="button" class="summary-card__btn btn btn-secondary">
+            Cancel Order
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
