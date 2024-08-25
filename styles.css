@@ -113,7 +113,8 @@ body::after {
 .payment-plan {
   background-color: var(--clr-grey);
   border-radius: 10px;
-  margin-block: 1.5rem;
+  margin-top: 10rem;
+  margin-bottom: 20rem;
   padding: 1rem 0.6rem;
 }
 
